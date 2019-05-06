@@ -1,0 +1,1739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.6.5 on win32)" generated="20190507 02:31:38.894" rpa="false">
+<suite id="s1" name="Tc" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc">
+<suite id="s1-s1" name="D-空白数据" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>delallstudent</arg>
+<arg>AND</arg>
+<arg>delallteacher</arg>
+<arg>AND</arg>
+<arg>delAllClassroom</arg>
+</arguments>
+<kw name="Delallstudent" library="py-lib.student.Student">
+<msg timestamp="20190507 02:31:39.328" level="INFO">{'retcode': 0, 'retlist': []}
+{'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:39.041" endtime="20190507 02:31:39.328"></status>
+</kw>
+<kw name="Delallteacher" library="py-lib.teachers.Teachers">
+<msg timestamp="20190507 02:31:39.549" level="INFO">{'retcode': 0, 'retlist': []}
+{'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:39.328" endtime="20190507 02:31:39.550"></status>
+</kw>
+<kw name="Del All Classroom" library="py-lib.classroom.Classroom">
+<msg timestamp="20190507 02:31:39.753" level="INFO">{'gradeid': None, 'retcode': 0, 'retlist': []}
+已经删除完毕
+{'gradeid': None, 'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:39.550" endtime="20190507 02:31:39.753"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:39.041" endtime="20190507 02:31:39.753"></status>
+</kw>
+<suite id="s1-s1-s1" name="D-七年级1班" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班">
+<kw name="Add Classroom" library="py-lib.classroom.Classroom" type="setup">
+<arguments>
+<arg>&amp;{add_same_classroom}[grade]</arg>
+<arg>&amp;{add_same_classroom}[name]</arg>
+<arg>&amp;{add_same_classroom}[limit]</arg>
+<arg>suit_eid01</arg>
+</arguments>
+<msg timestamp="20190507 02:31:39.878" level="INFO">${suit_eid01} = 137010</msg>
+<msg timestamp="20190507 02:31:39.879" level="INFO">{'id': 137010, 'invitecode': '1370105662216', 'retcode': 0}
+${suit_eid01}</msg>
+<status status="PASS" starttime="20190507 02:31:39.763" endtime="20190507 02:31:39.879"></status>
+</kw>
+<suite id="s1-s1-s1-s1" name="D-黄良威老师" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\d-黄良威老师">
+<kw name="Addteacher" library="py-lib.teachers.Teachers" type="setup">
+<arguments>
+<arg>&amp;{add_teacher}[username]</arg>
+<arg>&amp;{add_teacher}[realname]</arg>
+<arg>&amp;{add_teacher}[subjectid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{add_teacher}[phonenumber]</arg>
+<arg>&amp;{add_teacher}[email]</arg>
+<arg>&amp;{add_teacher}[idcard]</arg>
+<arg>newteacher</arg>
+</arguments>
+<msg timestamp="20190507 02:31:40.028" level="INFO">${newteacher} = 36072</msg>
+<msg timestamp="20190507 02:31:40.028" level="INFO">{'id': 36072, 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:39.886" endtime="20190507 02:31:40.028"></status>
+</kw>
+<suite id="s1-s1-s1-s1-s1" name="D-黄雪松学生" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\d-黄良威老师\d-黄雪松学生">
+<kw name="Addstudent" library="py-lib.student.Student" type="setup">
+<arguments>
+<arg>&amp;{onestudent}[name]</arg>
+<arg>&amp;{onestudent}[realname]</arg>
+<arg>&amp;{onestudent}[gradeid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{onestudent}[phonenumber]</arg>
+<arg>studentid</arg>
+</arguments>
+<msg timestamp="20190507 02:31:40.164" level="INFO">${studentid} = 15043</msg>
+<msg timestamp="20190507 02:31:40.164" level="INFO">{'id': 15043, 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:40.036" endtime="20190507 02:31:40.164"></status>
+</kw>
+<suite id="s1-s1-s1-s1-s1-s1" name="Web系统操作" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\d-黄良威老师\d-黄雪松学生\web系统操作.robot">
+<kw name="Openbrower" library="py-lib.seleniumlib" type="setup">
+<msg timestamp="20190507 02:31:42.828" level="FAIL">WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20190507 02:31:40.259" endtime="20190507 02:31:42.828"></status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s1-t1" name="老师发布作业1-tc005101">
+<status status="FAIL" starttime="20190507 02:31:42.829" endtime="20190507 02:31:42.832" critical="yes">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<kw name="Closebrower" library="py-lib.seleniumlib" type="teardown">
+<msg timestamp="20190507 02:31:42.835" level="FAIL">AttributeError: 'seleniumlib' object has no attribute 'driver'</msg>
+<status status="FAIL" starttime="20190507 02:31:42.834" endtime="20190507 02:31:42.836">AttributeError: 'seleniumlib' object has no attribute 'driver'</status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:40.165" endtime="20190507 02:31:42.836">Suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+
+
+Also suite teardown failed:
+AttributeError: 'seleniumlib' object has no attribute 'driver'</status>
+</suite>
+<suite id="s1-s1-s1-s1-s1-s2" name="学生管理2" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\d-黄良威老师\d-黄雪松学生\学生管理2.robot">
+<test id="s1-s1-s1-s1-s1-s2-t1" name="添加学生2-tc002002">
+<kw name="Addstudent" library="py-lib.student.Student">
+<arguments>
+<arg>&amp;{two_student}[name]</arg>
+<arg>&amp;{two_student}[realname]</arg>
+<arg>&amp;{two_student}[gradeid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{two_student}[phonenumber]</arg>
+</arguments>
+<assign>
+<var>${addstudent}</var>
+</assign>
+<msg timestamp="20190507 02:31:42.994" level="INFO">{'id': 15044, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:42.994" level="INFO">${addstudent} = {'retcode': 0, 'id': 15044}</msg>
+<status status="PASS" starttime="20190507 02:31:42.856" endtime="20190507 02:31:42.994"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{addstudent}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:42.995" endtime="20190507 02:31:42.995"></status>
+</kw>
+<kw name="Liststudent" library="py-lib.student.Student">
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190507 02:31:43.092" level="INFO">{'retcode': 0,
+ 'retlist': [{'classid': 137010,
+              'id': 15043,
+              'phonenumber': '4213213',
+              'realname': '黄雪松',
+              'username': 'hlw'},
+             {'classid': 137010,
+              'id': 15044,
+              'phonenumber': '131321315',
+              'realname': '杨经理',
+              'username': 'yjl'}]}</msg>
+<msg timestamp="20190507 02:31:43.092" level="INFO">${list} = {'retlist': [{'classid': 137010, 'realname': '黄雪松', 'username': 'hlw', 'phonenumber': '4213213', 'id': 15043}, {'classid': 137010, 'realname': '杨经理', 'username': 'yjl', 'phonenumber': '131321315', 'id...</msg>
+<status status="PASS" starttime="20190507 02:31:42.995" endtime="20190507 02:31:43.093"></status>
+</kw>
+<kw name="Studentshould Contain" library="py-lib.student.Student">
+<arguments>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{two_student}[name]</arg>
+<arg>&amp;{two_student}[realname]</arg>
+<arg>&amp;{two_student}[phonenumber]</arg>
+<arg>&amp;{addstudent}[id]</arg>
+<arg>&amp;{list}[retlist]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:43.094" level="INFO">{'classid': 137010,
+ 'id': 15044,
+ 'phonenumber': '131321315',
+ 'realname': '杨经理',
+ 'username': 'yjl'}</msg>
+<status status="PASS" starttime="20190507 02:31:43.093" endtime="20190507 02:31:43.095"></status>
+</kw>
+<kw name="Delstudent" library="py-lib.student.Student" type="teardown">
+<arguments>
+<arg>&amp;{addstudent}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:43.235" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:43.095" endtime="20190507 02:31:43.235"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:42.854" endtime="20190507 02:31:43.235" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-t2" name="删除学生1-tc002081">
+<kw name="Liststudent" library="py-lib.student.Student">
+<assign>
+<var>${beforelist}</var>
+</assign>
+<msg timestamp="20190507 02:31:43.356" level="INFO">{'retcode': 0,
+ 'retlist': [{'classid': 137010,
+              'id': 15043,
+              'phonenumber': '4213213',
+              'realname': '黄雪松',
+              'username': 'hlw'}]}</msg>
+<msg timestamp="20190507 02:31:43.356" level="INFO">${beforelist} = {'retlist': [{'classid': 137010, 'realname': '黄雪松', 'username': 'hlw', 'phonenumber': '4213213', 'id': 15043}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:43.237" endtime="20190507 02:31:43.356"></status>
+</kw>
+<kw name="Addstudent" library="py-lib.student.Student">
+<arguments>
+<arg>&amp;{two_student}[name]</arg>
+<arg>&amp;{two_student}[realname]</arg>
+<arg>&amp;{two_student}[gradeid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{two_student}[phonenumber]</arg>
+</arguments>
+<assign>
+<var>${addstudent}</var>
+</assign>
+<msg timestamp="20190507 02:31:43.486" level="INFO">{'id': 15045, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:43.487" level="INFO">${addstudent} = {'retcode': 0, 'id': 15045}</msg>
+<status status="PASS" starttime="20190507 02:31:43.356" endtime="20190507 02:31:43.487"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{addstudent}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:43.487" endtime="20190507 02:31:43.488"></status>
+</kw>
+<kw name="Delstudent" library="py-lib.student.Student">
+<arguments>
+<arg>&amp;{addstudent}[id]</arg>
+</arguments>
+<assign>
+<var>${del_s}</var>
+</assign>
+<msg timestamp="20190507 02:31:43.644" level="INFO">{'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:43.644" level="INFO">${del_s} = {'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:43.488" endtime="20190507 02:31:43.645"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{del_s}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:43.645" endtime="20190507 02:31:43.646"></status>
+</kw>
+<kw name="Liststudent" library="py-lib.student.Student">
+<assign>
+<var>${afterlist}</var>
+</assign>
+<msg timestamp="20190507 02:31:43.767" level="INFO">{'retcode': 0,
+ 'retlist': [{'classid': 137010,
+              'id': 15043,
+              'phonenumber': '4213213',
+              'realname': '黄雪松',
+              'username': 'hlw'}]}</msg>
+<msg timestamp="20190507 02:31:43.767" level="INFO">${afterlist} = {'retlist': [{'classid': 137010, 'realname': '黄雪松', 'username': 'hlw', 'phonenumber': '4213213', 'id': 15043}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:43.646" endtime="20190507 02:31:43.767"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${beforelist}</arg>
+<arg>${afterlist}</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:43.768" endtime="20190507 02:31:43.768"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:43.235" endtime="20190507 02:31:43.769" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190507 02:31:42.841" endtime="20190507 02:31:43.770"></status>
+</suite>
+<kw name="Delstudent" library="py-lib.student.Student" type="teardown">
+<arguments>
+<arg>${studentid}</arg>
+</arguments>
+<msg timestamp="20190507 02:31:43.922" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:43.777" endtime="20190507 02:31:43.922"></status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:40.028" endtime="20190507 02:31:43.923"></status>
+</suite>
+<suite id="s1-s1-s1-s1-s2" name="学生管理" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\d-黄良威老师\学生管理.robot">
+<test id="s1-s1-s1-s1-s2-t1" name="添加学生1-tc002001">
+<kw name="Addstudent" library="py-lib.student.Student">
+<arguments>
+<arg>&amp;{onestudent}[name]</arg>
+<arg>&amp;{onestudent}[realname]</arg>
+<arg>&amp;{onestudent}[gradeid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{onestudent}[phonenumber]</arg>
+</arguments>
+<assign>
+<var>${addstudent}</var>
+</assign>
+<msg timestamp="20190507 02:31:44.112" level="INFO">{'id': 15046, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:44.112" level="INFO">${addstudent} = {'retcode': 0, 'id': 15046}</msg>
+<status status="PASS" starttime="20190507 02:31:43.945" endtime="20190507 02:31:44.112"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{addstudent}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:44.112" endtime="20190507 02:31:44.113"></status>
+</kw>
+<kw name="Liststudent" library="py-lib.student.Student">
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190507 02:31:44.225" level="INFO">{'retcode': 0,
+ 'retlist': [{'classid': 137010,
+              'id': 15046,
+              'phonenumber': '4213213',
+              'realname': '黄雪松',
+              'username': 'hlw'}]}</msg>
+<msg timestamp="20190507 02:31:44.226" level="INFO">${list} = {'retlist': [{'classid': 137010, 'realname': '黄雪松', 'username': 'hlw', 'phonenumber': '4213213', 'id': 15046}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:44.113" endtime="20190507 02:31:44.226"></status>
+</kw>
+<kw name="Studentshould Contain" library="py-lib.student.Student">
+<arguments>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{onestudent}[name]</arg>
+<arg>&amp;{onestudent}[realname]</arg>
+<arg>&amp;{onestudent}[phonenumber]</arg>
+<arg>&amp;{addstudent}[id]</arg>
+<arg>&amp;{list}[retlist]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:44.227" level="INFO">{'classid': 137010,
+ 'id': 15046,
+ 'phonenumber': '4213213',
+ 'realname': '黄雪松',
+ 'username': 'hlw'}</msg>
+<status status="PASS" starttime="20190507 02:31:44.226" endtime="20190507 02:31:44.227"></status>
+</kw>
+<kw name="Delstudent" library="py-lib.student.Student" type="teardown">
+<arguments>
+<arg>&amp;{addstudent}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:44.372" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:44.228" endtime="20190507 02:31:44.372"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:43.943" endtime="20190507 02:31:44.373" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190507 02:31:43.929" endtime="20190507 02:31:44.373"></status>
+</suite>
+<suite id="s1-s1-s1-s1-s3" name="老师管理2" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\d-黄良威老师\老师管理2.robot">
+<test id="s1-s1-s1-s1-s3-t1" name="添加老师2-tc001002">
+<kw name="Addteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{add_teacher2}[username]</arg>
+<arg>&amp;{add_teacher2}[realname]</arg>
+<arg>&amp;{add_teacher2}[subjectid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{add_teacher2}[phonenumber]</arg>
+<arg>&amp;{add_teacher2}[email]</arg>
+<arg>&amp;{add_teacher2}[idcard]</arg>
+</arguments>
+<assign>
+<var>${newteacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:44.548" level="INFO">{'id': 36073, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:44.549" level="INFO">${newteacher} = {'retcode': 0, 'id': 36073}</msg>
+<status status="PASS" starttime="20190507 02:31:44.391" endtime="20190507 02:31:44.549"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{newteacher}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:44.549" endtime="20190507 02:31:44.550"></status>
+</kw>
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190507 02:31:44.652" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'},
+             {'email': '1029432643@qq.com',
+              'id': 36073,
+              'idcardnumber': '88888888',
+              'phonenumber': '13927956211',
+              'realname': '杨婧琳',
+              'teachclasslist': [137010],
+              'username': 'yangjinglin'}]}</msg>
+<msg timestamp="20190507 02:31:44.652" level="INFO">${list} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}, {'user...</msg>
+<status status="PASS" starttime="20190507 02:31:44.550" endtime="20190507 02:31:44.652"></status>
+</kw>
+<kw name="Teachershould Contain" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{teacher_should_be_contain2}[username]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{teacher_should_be_contain2}[realname]</arg>
+<arg>&amp;{newteacher}[id]</arg>
+<arg>&amp;{teacher_should_be_contain2}[phonenumber]</arg>
+<arg>&amp;{teacher_should_be_contain2}[email]</arg>
+<arg>&amp;{teacher_should_be_contain2}[idcard]</arg>
+<arg>&amp;{list}[retlist]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:44.655" level="INFO">{'email': '1029432643@qq.com',
+ 'id': 36073,
+ 'idcardnumber': '88888888',
+ 'phonenumber': '13927956211',
+ 'realname': '杨婧琳',
+ 'teachclasslist': [137010],
+ 'username': 'yangjinglin'}</msg>
+<status status="PASS" starttime="20190507 02:31:44.653" endtime="20190507 02:31:44.655"></status>
+</kw>
+<kw name="Delteacher" library="py-lib.teachers.Teachers" type="teardown">
+<arguments>
+<arg>&amp;{newteacher}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:44.794" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:44.655" endtime="20190507 02:31:44.794"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:44.390" endtime="20190507 02:31:44.794" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s3-t2" name="添加老师3-tc001003">
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${beforelist}</var>
+</assign>
+<msg timestamp="20190507 02:31:44.906" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:44.907" level="INFO">${beforelist} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:44.798" endtime="20190507 02:31:44.907"></status>
+</kw>
+<kw name="Addteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{add_teacher}[username]</arg>
+<arg>&amp;{add_teacher}[realname]</arg>
+<arg>&amp;{add_teacher}[subjectid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{add_teacher}[phonenumber]</arg>
+<arg>&amp;{add_teacher}[email]</arg>
+<arg>&amp;{add_teacher}[idcard]</arg>
+</arguments>
+<assign>
+<var>${jieguo}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.006" level="INFO">{'reason': '登录名 huangliangwei 已经存在', 'retcode': 1}</msg>
+<msg timestamp="20190507 02:31:45.007" level="INFO">${jieguo} = {'reason': '登录名 huangliangwei 已经存在', 'retcode': 1}</msg>
+<status status="PASS" starttime="20190507 02:31:44.907" endtime="20190507 02:31:45.007"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{jieguo}[retcode]==1</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.007" endtime="20190507 02:31:45.008"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$jieguo['reason']=="登录名 huangliangwei 已经存在"</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.008" endtime="20190507 02:31:45.023"></status>
+</kw>
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${afterlist}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.134" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:45.135" level="INFO">${afterlist} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:45.023" endtime="20190507 02:31:45.135"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{beforelist}[retlist]==&amp;{afterlist}[retlist]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.135" endtime="20190507 02:31:45.136"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:44.795" endtime="20190507 02:31:45.136" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s3-t3" name="修改老师1-tc001051">
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.251" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:45.251" level="INFO">${list} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:45.140" endtime="20190507 02:31:45.251"></status>
+</kw>
+<kw name="Modifyteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{impossible_teacher}[id]</arg>
+<arg>&amp;{impossible_teacher}[realname]</arg>
+</arguments>
+<assign>
+<var>${modif_teacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.347" level="INFO">{'reason': 'id 为`55555`的老师不存在', 'retcode': 1}</msg>
+<msg timestamp="20190507 02:31:45.347" level="INFO">${modif_teacher} = {'reason': 'id 为`55555`的老师不存在', 'retcode': 1}</msg>
+<status status="PASS" starttime="20190507 02:31:45.252" endtime="20190507 02:31:45.347"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{modif_teacher}[retcode]==1</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.348" endtime="20190507 02:31:45.349"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$modif_teacher['reason']=="id 为`&amp;{impossible_teacher}[id]`的老师不存在"</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.349" endtime="20190507 02:31:45.352"></status>
+</kw>
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${newlist}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.471" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:45.471" level="INFO">${newlist} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:45.352" endtime="20190507 02:31:45.471"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$list['retlist']==$newlist['retlist']</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.471" endtime="20190507 02:31:45.473"></status>
+</kw>
+<doc>修改不存在的老师id</doc>
+<status status="PASS" starttime="20190507 02:31:45.137" endtime="20190507 02:31:45.473" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s3-t4" name="修改老师2-tc001052">
+<kw name="Addteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{add_teacher2}[username]</arg>
+<arg>&amp;{add_teacher2}[realname]</arg>
+<arg>&amp;{add_teacher2}[subjectid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{add_teacher2}[phonenumber]</arg>
+<arg>&amp;{add_teacher2}[email]</arg>
+<arg>&amp;{add_teacher2}[idcard]</arg>
+</arguments>
+<assign>
+<var>${newteacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.599" level="INFO">{'id': 36074, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:45.599" level="INFO">${newteacher} = {'retcode': 0, 'id': 36074}</msg>
+<status status="PASS" starttime="20190507 02:31:45.475" endtime="20190507 02:31:45.599"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$newteacher['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:45.599" endtime="20190507 02:31:45.601"></status>
+</kw>
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>1</arg>
+<arg>七年级10班</arg>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${twoteacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.740" level="INFO">{'id': 137011, 'invitecode': '1370115287466', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:45.740" level="INFO">${twoteacher} = {'invitecode': '1370115287466', 'retcode': 0, 'id': 137011}</msg>
+<status status="PASS" starttime="20190507 02:31:45.602" endtime="20190507 02:31:45.740"></status>
+</kw>
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>1</arg>
+<arg>七年级11班</arg>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${threeteacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:45.858" level="INFO">{'id': 137012, 'invitecode': '1370121345795', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:45.859" level="INFO">${threeteacher} = {'invitecode': '1370121345795', 'retcode': 0, 'id': 137012}</msg>
+<status status="PASS" starttime="20190507 02:31:45.741" endtime="20190507 02:31:45.859"></status>
+</kw>
+<kw name="Modifyteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{newteacher}[id]</arg>
+<arg>羊羊羊</arg>
+<arg>1</arg>
+<arg>&amp;{twoteacher}[id],&amp;{threeteacher}[id]</arg>
+</arguments>
+<assign>
+<var>${modif_teacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:46.006" level="INFO">{'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:46.007" level="INFO">${modif_teacher} = {'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:45.859" endtime="20190507 02:31:46.007"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{modif_teacher}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.007" endtime="20190507 02:31:46.009"></status>
+</kw>
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190507 02:31:46.107" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'},
+             {'email': '1029432643@qq.com',
+              'id': 36074,
+              'idcardnumber': '88888888',
+              'phonenumber': '13927956211',
+              'realname': '羊羊羊',
+              'teachclasslist': [137011, 137012],
+              'username': 'yangjinglin'}]}</msg>
+<msg timestamp="20190507 02:31:46.107" level="INFO">${list} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}, {'user...</msg>
+<status status="PASS" starttime="20190507 02:31:46.009" endtime="20190507 02:31:46.107"></status>
+</kw>
+<kw name="Teachershould Contain" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{teacher_should_be_contain2}[username]</arg>
+<arg>&amp;{twoteacher}[id],&amp;{threeteacher}[id]</arg>
+<arg>羊羊羊</arg>
+<arg>&amp;{newteacher}[id]</arg>
+<arg>&amp;{teacher_should_be_contain2}[phonenumber]</arg>
+<arg>&amp;{teacher_should_be_contain2}[email]</arg>
+<arg>&amp;{teacher_should_be_contain2}[idcard]</arg>
+<arg>&amp;{list}[retlist]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:46.109" level="INFO">{'email': '1029432643@qq.com',
+ 'id': 36074,
+ 'idcardnumber': '88888888',
+ 'phonenumber': '13927956211',
+ 'realname': '羊羊羊',
+ 'teachclasslist': [137011, 137012],
+ 'username': 'yangjinglin'}</msg>
+<status status="PASS" starttime="20190507 02:31:46.107" endtime="20190507 02:31:46.109"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>delteacher</arg>
+<arg>&amp;{newteacher}[id]</arg>
+<arg>AND</arg>
+<arg>delclassroom</arg>
+<arg>&amp;{twoteacher}[id]</arg>
+<arg>AND</arg>
+<arg>delclassroom</arg>
+<arg>&amp;{threeteacher}[id]</arg>
+</arguments>
+<kw name="Delteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{newteacher}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:46.239" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:46.110" endtime="20190507 02:31:46.239"></status>
+</kw>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{twoteacher}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.239" endtime="20190507 02:31:46.343"></status>
+</kw>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{threeteacher}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.343" endtime="20190507 02:31:46.466"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:46.109" endtime="20190507 02:31:46.466"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:45.474" endtime="20190507 02:31:46.466" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s3-t5" name="删除老师1-tc001081">
+<kw name="Delteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{impossible_teacher}[id]</arg>
+</arguments>
+<assign>
+<var>${del_teacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:46.594" level="INFO">{'reason': 'id 为`55555`的老师不存在', 'retcode': 404}</msg>
+<msg timestamp="20190507 02:31:46.595" level="INFO">${del_teacher} = {'reason': 'id 为`55555`的老师不存在', 'retcode': 404}</msg>
+<status status="PASS" starttime="20190507 02:31:46.468" endtime="20190507 02:31:46.595"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{del_teacher}[retcode]==404</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.595" endtime="20190507 02:31:46.596"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$del_teacher['reason']=="id 为`&amp;{impossible_teacher}[id]`的老师不存在"</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.596" endtime="20190507 02:31:46.599"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:46.467" endtime="20190507 02:31:46.599" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-s3-t6" name="删除老师2-tc001082">
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${beforelist}</var>
+</assign>
+<msg timestamp="20190507 02:31:46.700" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:46.700" level="INFO">${beforelist} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:46.601" endtime="20190507 02:31:46.701"></status>
+</kw>
+<kw name="Addteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{add_teacher2}[username]</arg>
+<arg>&amp;{add_teacher2}[realname]</arg>
+<arg>&amp;{add_teacher2}[subjectid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{add_teacher2}[phonenumber]</arg>
+<arg>&amp;{add_teacher2}[email]</arg>
+<arg>&amp;{add_teacher2}[idcard]</arg>
+</arguments>
+<assign>
+<var>${newteacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:46.835" level="INFO">{'id': 36075, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:46.835" level="INFO">${newteacher} = {'retcode': 0, 'id': 36075}</msg>
+<status status="PASS" starttime="20190507 02:31:46.701" endtime="20190507 02:31:46.835"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${newteacher}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.835" endtime="20190507 02:31:46.837"></status>
+</kw>
+<kw name="Delteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{newteacher}[id]</arg>
+</arguments>
+<assign>
+<var>${del_teacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:46.976" level="INFO">{'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:46.977" level="INFO">${del_teacher} = {'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:46.837" endtime="20190507 02:31:46.977"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{del_teacher}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:46.977" endtime="20190507 02:31:46.978"></status>
+</kw>
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${afterlist}</var>
+</assign>
+<msg timestamp="20190507 02:31:47.088" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36072,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:47.088" level="INFO">${afterlist} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36072, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:46.978" endtime="20190507 02:31:47.088"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${afterlist}</arg>
+<arg>${beforelist}</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:47.089" endtime="20190507 02:31:47.089"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:46.600" endtime="20190507 02:31:47.089" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190507 02:31:44.379" endtime="20190507 02:31:47.090"></status>
+</suite>
+<kw name="Delteacher" library="py-lib.teachers.Teachers" type="teardown">
+<arguments>
+<arg>${newteacher}</arg>
+</arguments>
+<msg timestamp="20190507 02:31:47.236" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:47.099" endtime="20190507 02:31:47.236"></status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:39.879" endtime="20190507 02:31:47.236"></status>
+</suite>
+<suite id="s1-s1-s1-s2" name="Web系统" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\web系统">
+<kw name="Openbrower" library="py-lib.seleniumlib" type="setup">
+<msg timestamp="20190507 02:31:49.779" level="FAIL">WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20190507 02:31:47.249" endtime="20190507 02:31:49.779"></status>
+</kw>
+<suite id="s1-s1-s1-s2-s1" name="D-有一门学生" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\web系统\d-有一门学生">
+<suite id="s1-s1-s1-s2-s1-s1" name="老师登录" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\web系统\d-有一门学生\老师登录.robot">
+<test id="s1-s1-s1-s2-s1-s1-t1" name="老师登录2-tc005002">
+<status status="FAIL" starttime="20190507 02:31:49.788" endtime="20190507 02:31:49.790" critical="yes">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<status status="FAIL" starttime="20190507 02:31:49.785" endtime="20190507 02:31:49.791">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</suite>
+<status status="FAIL" starttime="20190507 02:31:49.780" endtime="20190507 02:31:49.795">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</suite>
+<suite id="s1-s1-s1-s2-s2" name="Web操作" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\web系统\web操作.robot">
+<test id="s1-s1-s1-s2-s2-t1" name="老师登录1-tc005001">
+<status status="FAIL" starttime="20190507 02:31:49.803" endtime="20190507 02:31:49.804" critical="yes">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<test id="s1-s1-s1-s2-s2-t2" name="学生登录1-tc005081">
+<status status="FAIL" starttime="20190507 02:31:49.805" endtime="20190507 02:31:49.806" critical="yes">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<status status="FAIL" starttime="20190507 02:31:49.800" endtime="20190507 02:31:49.807">Parent suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</suite>
+<kw name="Closebrower" library="py-lib.seleniumlib" type="teardown">
+<msg timestamp="20190507 02:31:49.811" level="FAIL">AttributeError: 'seleniumlib' object has no attribute 'driver'</msg>
+<status status="FAIL" starttime="20190507 02:31:49.811" endtime="20190507 02:31:49.812">AttributeError: 'seleniumlib' object has no attribute 'driver'</status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:47.243" endtime="20190507 02:31:49.812">Suite setup failed:
+WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64)
+
+
+Also suite teardown failed:
+AttributeError: 'seleniumlib' object has no attribute 'driver'</status>
+</suite>
+<suite id="s1-s1-s1-s3" name="班级管理2" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\班级管理2.robot">
+<test id="s1-s1-s1-s3-t1" name="增加班级2-tc000002">
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{add_classroom}[grade]</arg>
+<arg>&amp;{add_classroom}[name]</arg>
+<arg>&amp;{add_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20190507 02:31:49.922" level="INFO">{'id': 137013, 'invitecode': '1370137194949', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:49.923" level="INFO">${class} = {'invitecode': '1370137194949', 'retcode': 0, 'id': 137013}</msg>
+<status status="PASS" starttime="20190507 02:31:49.825" endtime="20190507 02:31:49.923"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$class['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:49.923" endtime="20190507 02:31:49.925"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${classs}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.058" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []},
+               { 'grade__name': '七年级',
+                 'id': 137013,
+                 'invitecode': '1370137194949',
+                 'name': '七年级二班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:50.059" level="INFO">${classs} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}, {'name': '七年级二班', 'grade_...</msg>
+<status status="PASS" starttime="20190507 02:31:49.925" endtime="20190507 02:31:50.059"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$classs['retlist']</arg>
+</arguments>
+<assign>
+<var>${onlyclass0}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.061" level="INFO">${onlyclass0} = [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}, {'name': '七年级二班', 'grade__name': '七年级', 'invitecode': ...</msg>
+<status status="PASS" starttime="20190507 02:31:50.059" endtime="20190507 02:31:50.061"></status>
+</kw>
+<kw name="Tshould Contain" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>${onlyclass0}</arg>
+<arg>&amp;{add_classroom}[name]</arg>
+<arg>&amp;{add_classroom}[nianji]</arg>
+<arg>&amp;{class}[invitecode]</arg>
+<arg>&amp;{add_classroom}[limit]</arg>
+<arg>0</arg>
+<arg>&amp;{class}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:50.062" level="INFO">{'name': '七年级二班', 'grade__name': '七年级', 'invitecode': '1370137194949', 'studentlimit': 20, 'studentnumber': 0, 'id': 137013, 'teacherlist': []}
+[{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}, {'name': '七年级二班', 'grade__name': '七年级', 'invitecode': '1370137194949', 'studentlimit': 20, 'studentnumber': 0, 'id': 137013, 'teacherlist': []}]</msg>
+<status status="PASS" starttime="20190507 02:31:50.061" endtime="20190507 02:31:50.063"></status>
+</kw>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom" type="teardown">
+<arguments>
+<arg>&amp;{class}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.063" endtime="20190507 02:31:50.182"></status>
+</kw>
+<doc>增加新的班级</doc>
+<status status="PASS" starttime="20190507 02:31:49.823" endtime="20190507 02:31:50.182" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s3-t2" name="增加班级3-tc000003">
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.289" level="INFO">{ 'gradeid': 1,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:50.290" level="INFO">${class} = {'gradeid': 1, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:50.185" endtime="20190507 02:31:50.290"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$class['retlist']</arg>
+</arguments>
+<assign>
+<var>${onlyclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.292" level="INFO">${onlyclass} = [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}]</msg>
+<status status="PASS" starttime="20190507 02:31:50.290" endtime="20190507 02:31:50.292"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>len(${onlyclass})</arg>
+</arguments>
+<assign>
+<var>${len}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.292" level="INFO">${len} = 1</msg>
+<status status="PASS" starttime="20190507 02:31:50.292" endtime="20190507 02:31:50.292"></status>
+</kw>
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{add_same_classroom}[grade]</arg>
+<arg>&amp;{add_same_classroom}[name]</arg>
+<arg>&amp;{add_same_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${class1}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.407" level="INFO">{ 'reason': 'Traceback (most recent call last):\n'
+            '  File '
+            '"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", '
+            'line 542, in addClass\n'
+            '    school_class = '
+            'self._addClass(name,schoolid,gradeid,studentlimit)\n'
+            '  File '
+            '"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", '
+            'line 531, in _addClass\n'
+            '    school_class.save()\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 710, in save\n'
+            '    force_update=force_update, update_fields=update_fields)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 738, in save_base\n'
+            '    updated = self._save_table(raw, cls, force_insert, '
+            'force_update, using, update_fields)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 822, in _save_table\n'
+            '    result = self._do_insert(cls._base_manager, using, fields, '
+            'update_pk, raw)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 861, in _do_insert\n'
+            '    using=using, raw=raw)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", '
+            'line 127, in manager_method\n'
+            '    return getattr(self.get_queryset(), name)(*args, **kwargs)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/query.py", '
+            'line 920, in _insert\n'
+            '    return '
+            'query.get_compiler(using=using).execute_sql(return_id)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", '
+            'line 974, in execute_sql\n'
+            '    cursor.execute(sql, params)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", '
+            'line 64, in execute\n'
+            '    return self.cursor.execute(sql, params)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/utils.py", line '
+            '97, in __exit__\n'
+            '    six.reraise(dj_exc_type, dj_exc_value, traceback)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", '
+            'line 64, in execute\n'
+            '    return self.cursor.execute(sql, params)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", '
+            'line 124, in execute\n'
+            '    return self.cursor.execute(query, args)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line '
+            '205, in execute\n'
+            '    self.errorhandler(self, exc, value)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", '
+            'line 36, in defaulterrorhandler\n'
+            '    raise errorclass, errorvalue\n'
+            'IntegrityError: (1062, "Duplicate entry '
+            "'\\xe4\\xb8\\x83\\xe5\\xb9\\xb4\\xe7\\xba\\xa7\\xe4\\xb8\\x80\\xe7\\x8f\\xad-528-1' "
+            'for key \'name\'")\n',
+  'retcode': 1}</msg>
+<msg timestamp="20190507 02:31:50.408" level="INFO">${class1} = {'reason': 'Traceback (most recent call last):\n  File "/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", line 542, in addClass\n    school_class = self._addClass(name,schoo...</msg>
+<status status="PASS" starttime="20190507 02:31:50.293" endtime="20190507 02:31:50.408"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$class1['retcode']==1</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.408" endtime="20190507 02:31:50.410"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${newclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.519" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:50.519" level="INFO">${newclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:50.410" endtime="20190507 02:31:50.519"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$newclass['retlist']</arg>
+</arguments>
+<assign>
+<var>${twoclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.522" level="INFO">${twoclass} = [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}]</msg>
+<status status="PASS" starttime="20190507 02:31:50.520" endtime="20190507 02:31:50.522"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>len(${twoclass})</arg>
+</arguments>
+<assign>
+<var>${newlen}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.522" level="INFO">${newlen} = 1</msg>
+<status status="PASS" starttime="20190507 02:31:50.522" endtime="20190507 02:31:50.523"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$newlen==$len</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.523" endtime="20190507 02:31:50.525"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${twoclass}</arg>
+<arg>${onlyclass}</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.525" endtime="20190507 02:31:50.525"></status>
+</kw>
+<doc>增加新的班级</doc>
+<status status="PASS" starttime="20190507 02:31:50.183" endtime="20190507 02:31:50.526" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s3-t3" name="修改班级1-tc000051">
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{add_classroom}[grade]</arg>
+<arg>&amp;{add_classroom}[name]</arg>
+<arg>&amp;{add_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.649" level="INFO">{'id': 137015, 'invitecode': '1370152406671', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:50.649" level="INFO">${class} = {'invitecode': '1370152406671', 'retcode': 0, 'id': 137015}</msg>
+<status status="PASS" starttime="20190507 02:31:50.529" endtime="20190507 02:31:50.649"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$class['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.649" endtime="20190507 02:31:50.651"></status>
+</kw>
+<kw name="Modify Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{class}[id]</arg>
+<arg>&amp;{modifyclassroom}[name]</arg>
+<arg>&amp;{modifyclassroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${newclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.750" level="INFO">{'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:50.750" level="INFO">${newclass} = {'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:50.651" endtime="20190507 02:31:50.751"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$newclass['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.751" endtime="20190507 02:31:50.753"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${afterclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:50.868" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []},
+               { 'grade__name': '七年级',
+                 'id': 137015,
+                 'invitecode': '1370152406671',
+                 'name': '七年级二班修改版',
+                 'studentlimit': 100,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:50.868" level="INFO">${afterclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}, {'name': '七年级二班修改版', 'gra...</msg>
+<status status="PASS" starttime="20190507 02:31:50.753" endtime="20190507 02:31:50.868"></status>
+</kw>
+<kw name="Tshould Contain" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{afterclass}[retlist]</arg>
+<arg>&amp;{modifyclassroom}[name]</arg>
+<arg>&amp;{add_classroom}[nianji]</arg>
+<arg>&amp;{class}[invitecode]</arg>
+<arg>&amp;{modifyclassroom}[limit]</arg>
+<arg>0</arg>
+<arg>&amp;{class}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:50.870" level="INFO">{'name': '七年级二班修改版', 'grade__name': '七年级', 'invitecode': '1370152406671', 'studentlimit': 100, 'studentnumber': 0, 'id': 137015, 'teacherlist': []}
+[{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}, {'name': '七年级二班修改版', 'grade__name': '七年级', 'invitecode': '1370152406671', 'studentlimit': 100, 'studentnumber': 0, 'id': 137015, 'teacherlist': []}]</msg>
+<status status="PASS" starttime="20190507 02:31:50.869" endtime="20190507 02:31:50.870"></status>
+</kw>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom" type="teardown">
+<arguments>
+<arg>&amp;{class}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:50.871" endtime="20190507 02:31:50.978"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:50.526" endtime="20190507 02:31:50.978" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s3-t4" name="修改班级2-tc000052">
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{add_classroom}[grade]</arg>
+<arg>&amp;{add_classroom}[name]</arg>
+<arg>&amp;{add_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.102" level="INFO">{'id': 137016, 'invitecode': '1370162539175', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:51.103" level="INFO">${class} = {'invitecode': '1370162539175', 'retcode': 0, 'id': 137016}</msg>
+<status status="PASS" starttime="20190507 02:31:50.981" endtime="20190507 02:31:51.103"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$class['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.103" endtime="20190507 02:31:51.105"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${beforerclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.219" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []},
+               { 'grade__name': '七年级',
+                 'id': 137016,
+                 'invitecode': '1370162539175',
+                 'name': '七年级二班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:51.220" level="INFO">${beforerclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}, {'name': '七年级二班', 'grade_...</msg>
+<status status="PASS" starttime="20190507 02:31:51.105" endtime="20190507 02:31:51.220"></status>
+</kw>
+<kw name="Modify Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{class}[id]</arg>
+<arg>&amp;{add_same_classroom}[name]</arg>
+<arg>&amp;{add_same_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${newclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.333" level="INFO">{'reason': '未知错误:Traceback (most recent call last):\n'
+           '  File '
+           '"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", '
+           'line 612, in modifyClass\n'
+           '    school_class.save()\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+           'line 710, in save\n'
+           '    force_update=force_update, update_fields=update_fields)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+           'line 738, in save_base\n'
+           '    updated = self._save_table(raw, cls, force_insert, '
+           'force_update, using, update_fields)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+           'line 803, in _save_table\n'
+           '    forced_update)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+           'line 853, in _do_update\n'
+           '    return filtered._update(values) &gt; 0\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/query.py", '
+           'line 580, in _update\n'
+           '    return query.get_compiler(self.db).execute_sql(CURSOR)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", '
+           'line 1062, in execute_sql\n'
+           '    cursor = super(SQLUpdateCompiler, '
+           'self).execute_sql(result_type)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", '
+           'line 840, in execute_sql\n'
+           '    cursor.execute(sql, params)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", '
+           'line 64, in execute\n'
+           '    return self.cursor.execute(sql, params)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/utils.py", line '
+           '97, in __exit__\n'
+           '    six.reraise(dj_exc_type, dj_exc_value, traceback)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", '
+           'line 64, in execute\n'
+           '    return self.cursor.execute(sql, params)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", '
+           'line 124, in execute\n'
+           '    return self.cursor.execute(query, args)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line '
+           '205, in execute\n'
+           '    self.errorhandler(self, exc, value)\n'
+           '  File '
+           '"/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", '
+           'line 36, in defaulterrorhandler\n'
+           '    raise errorclass, errorvalue\n'
+           'IntegrityError: (1062, "Duplicate entry '
+           "'\\xe4\\xb8\\x83\\xe5\\xb9\\xb4\\xe7\\xba\\xa7\\xe4\\xb8\\x80\\xe7\\x8f\\xad-528-1' "
+           'for key \'name\'")\n',
+ 'retcode': 10000}</msg>
+<msg timestamp="20190507 02:31:51.333" level="INFO">${newclass} = {'reason': '未知错误:Traceback (most recent call last):\n  File "/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", line 612, in modifyClass\n    school_class.save()\n  File "/us...</msg>
+<status status="PASS" starttime="20190507 02:31:51.220" endtime="20190507 02:31:51.334"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$newclass['retcode']==1</arg>
+</arguments>
+<msg timestamp="20190507 02:31:51.339" level="FAIL">'$newclass['retcode']==1' should be true.</msg>
+<status status="FAIL" starttime="20190507 02:31:51.334" endtime="20190507 02:31:51.339"></status>
+</kw>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom" type="teardown">
+<arguments>
+<arg>&amp;{class}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.340" endtime="20190507 02:31:51.452"></status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:50.980" endtime="20190507 02:31:51.453" critical="yes">'$newclass['retcode']==1' should be true.</status>
+</test>
+<test id="s1-s1-s1-s3-t5" name="修改班级3-tc000053">
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${beforeclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.661" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:51.661" level="INFO">${beforeclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:51.455" endtime="20190507 02:31:51.661"></status>
+</kw>
+<kw name="Modify Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{impossible_classroom}[id]</arg>
+<arg>&amp;{impossible_classroom}[name]</arg>
+<arg>&amp;{impossible_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${newclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.771" level="INFO">{'reason': 'id 为`9999`的班级不存在', 'retcode': 404}</msg>
+<msg timestamp="20190507 02:31:51.771" level="INFO">${newclass} = {'reason': 'id 为`9999`的班级不存在', 'retcode': 404}</msg>
+<status status="PASS" starttime="20190507 02:31:51.662" endtime="20190507 02:31:51.771"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$newclass['retcode']==404</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.771" endtime="20190507 02:31:51.773"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$newclass['reason']=='id 为`&amp;{impossible_classroom}[id]`的班级不存在'</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.773" endtime="20190507 02:31:51.776"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${afterclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.883" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:51.884" level="INFO">${afterclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:51.776" endtime="20190507 02:31:51.884"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$afterclass['retlist']==$beforeclass['retlist']</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.884" endtime="20190507 02:31:51.887"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:51.453" endtime="20190507 02:31:51.887" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s3-t6" name="删除班级1-tc000081">
+<kw name="Del Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>5454545</arg>
+</arguments>
+<assign>
+<var>${ret}</var>
+</assign>
+<msg timestamp="20190507 02:31:51.994" level="INFO">${ret} = {'reason': 'id 为`5454545`的班级不存在', 'retcode': 404}</msg>
+<status status="PASS" starttime="20190507 02:31:51.889" endtime="20190507 02:31:51.994"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$ret['retcode']==404</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.994" endtime="20190507 02:31:51.996"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$ret['reason']=="id 为`5454545`的班级不存在"</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:51.997" endtime="20190507 02:31:51.999"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:51.887" endtime="20190507 02:31:51.999" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s3-t7" name="删除班级2-tc000082">
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${beforeclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:52.115" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:52.115" level="INFO">${beforeclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:52.001" endtime="20190507 02:31:52.116"></status>
+</kw>
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{add_classroom}[grade]</arg>
+<arg>&amp;{add_classroom}[name]</arg>
+<arg>&amp;{add_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${ret}</var>
+</assign>
+<msg timestamp="20190507 02:31:52.238" level="INFO">{'id': 137017, 'invitecode': '1370178127504', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:52.238" level="INFO">${ret} = {'invitecode': '1370178127504', 'retcode': 0, 'id': 137017}</msg>
+<status status="PASS" starttime="20190507 02:31:52.116" endtime="20190507 02:31:52.238"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$ret['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:52.238" endtime="20190507 02:31:52.240"></status>
+</kw>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{ret}[id]</arg>
+</arguments>
+<assign>
+<var>${ret}</var>
+</assign>
+<msg timestamp="20190507 02:31:52.366" level="INFO">${ret} = {'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:52.241" endtime="20190507 02:31:52.366"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$ret['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:52.366" endtime="20190507 02:31:52.368"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${afterclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:52.483" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137010,
+                 'invitecode': '1370105662216',
+                 'name': '七年级一班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:52.483" level="INFO">${afterclass} = {'gradeid': None, 'retlist': [{'name': '七年级一班', 'grade__name': '七年级', 'invitecode': '1370105662216', 'studentlimit': 20, 'studentnumber': 0, 'id': 137010, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:52.368" endtime="20190507 02:31:52.483"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$beforeclass['retlist']==$afterclass['retlist']</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:52.484" endtime="20190507 02:31:52.486"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:51.999" endtime="20190507 02:31:52.486" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20190507 02:31:49.816" endtime="20190507 02:31:52.487"></status>
+</suite>
+<suite id="s1-s1-s1-s4" name="老师管理" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\d-七年级1班\老师管理.robot">
+<test id="s1-s1-s1-s4-t1" name="添加老师1-tc001001">
+<kw name="Addteacher" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{add_teacher}[username]</arg>
+<arg>&amp;{add_teacher}[realname]</arg>
+<arg>&amp;{add_teacher}[subjectid]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{add_teacher}[phonenumber]</arg>
+<arg>&amp;{add_teacher}[email]</arg>
+<arg>&amp;{add_teacher}[idcard]</arg>
+</arguments>
+<assign>
+<var>${addteacher}</var>
+</assign>
+<msg timestamp="20190507 02:31:52.634" level="INFO">{'id': 36076, 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:52.634" level="INFO">${addteacher} = {'retcode': 0, 'id': 36076}</msg>
+<status status="PASS" starttime="20190507 02:31:52.502" endtime="20190507 02:31:52.635"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{addteacher}[retcode]==0</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:52.635" endtime="20190507 02:31:52.635"></status>
+</kw>
+<kw name="Listteacher" library="py-lib.teachers.Teachers">
+<assign>
+<var>${teacherlist}</var>
+</assign>
+<msg timestamp="20190507 02:31:52.727" level="INFO">{'retcode': 0,
+ 'retlist': [{'email': '1029432643@qq.com',
+              'id': 36076,
+              'idcardnumber': '4455454545',
+              'phonenumber': '13144115486',
+              'realname': '黄良威',
+              'teachclasslist': [137010],
+              'username': 'huangliangwei'}]}</msg>
+<msg timestamp="20190507 02:31:52.728" level="INFO">${teacherlist} = {'retlist': [{'username': 'huangliangwei', 'teachclasslist': [137010], 'realname': '黄良威', 'id': 36076, 'phonenumber': '13144115486', 'email': '1029432643@qq.com', 'idcardnumber': '4455454545'}], 'retc...</msg>
+<status status="PASS" starttime="20190507 02:31:52.636" endtime="20190507 02:31:52.728"></status>
+</kw>
+<kw name="Teachershould Contain" library="py-lib.teachers.Teachers">
+<arguments>
+<arg>&amp;{teacher_should_be_contain}[username]</arg>
+<arg>${suit_eid01}</arg>
+<arg>&amp;{teacher_should_be_contain}[realname]</arg>
+<arg>&amp;{addteacher}[id]</arg>
+<arg>&amp;{teacher_should_be_contain}[phonenumber]</arg>
+<arg>&amp;{teacher_should_be_contain}[email]</arg>
+<arg>&amp;{teacher_should_be_contain}[idcard]</arg>
+<arg>&amp;{teacherlist}[retlist]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:52.731" level="INFO">{'email': '1029432643@qq.com',
+ 'id': 36076,
+ 'idcardnumber': '4455454545',
+ 'phonenumber': '13144115486',
+ 'realname': '黄良威',
+ 'teachclasslist': [137010],
+ 'username': 'huangliangwei'}</msg>
+<status status="PASS" starttime="20190507 02:31:52.728" endtime="20190507 02:31:52.731"></status>
+</kw>
+<kw name="Delteacher" library="py-lib.teachers.Teachers" type="teardown">
+<arguments>
+<arg>&amp;{addteacher}[id]</arg>
+</arguments>
+<msg timestamp="20190507 02:31:52.882" level="INFO">{'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:52.731" endtime="20190507 02:31:52.882"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:52.500" endtime="20190507 02:31:52.882" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190507 02:31:52.493" endtime="20190507 02:31:52.882"></status>
+</suite>
+<kw name="Del Classroom" library="py-lib.classroom.Classroom" type="teardown">
+<arguments>
+<arg>${suit_eid01}</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:52.888" endtime="20190507 02:31:53.020"></status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:39.754" endtime="20190507 02:31:53.020"></status>
+</suite>
+<suite id="s1-s1-s2" name="班级管理" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\班级管理">
+<suite id="s1-s1-s2-s1" name="班级管理" source="H:\python3.6.5\python  project\robotframwork lianxi\lianxijenkins\tc\d-空白数据\班级管理\班级管理.robot">
+<test id="s1-s1-s2-s1-t1" name="增加班级-tc000001">
+<kw name="Add Classroom" library="py-lib.classroom.Classroom">
+<arguments>
+<arg>&amp;{add_classroom}[grade]</arg>
+<arg>&amp;{add_classroom}[name]</arg>
+<arg>&amp;{add_classroom}[limit]</arg>
+</arguments>
+<assign>
+<var>${class}</var>
+</assign>
+<msg timestamp="20190507 02:31:53.152" level="INFO">{'id': 137018, 'invitecode': '1370189366179', 'retcode': 0}</msg>
+<msg timestamp="20190507 02:31:53.152" level="INFO">${class} = {'invitecode': '1370189366179', 'retcode': 0, 'id': 137018}</msg>
+<status status="PASS" starttime="20190507 02:31:53.045" endtime="20190507 02:31:53.152"></status>
+</kw>
+<kw name="List Classroom" library="py-lib.classroom.Classroom">
+<assign>
+<var>${classs}</var>
+</assign>
+<msg timestamp="20190507 02:31:53.262" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137018,
+                 'invitecode': '1370189366179',
+                 'name': '七年级二班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}</msg>
+<msg timestamp="20190507 02:31:53.263" level="INFO">${classs} = {'gradeid': None, 'retlist': [{'name': '七年级二班', 'grade__name': '七年级', 'invitecode': '1370189366179', 'studentlimit': 20, 'studentnumber': 0, 'id': 137018, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20190507 02:31:53.152" endtime="20190507 02:31:53.263"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>&amp;{classs}[retlist][0]</arg>
+</arguments>
+<assign>
+<var>${onlyclass}</var>
+</assign>
+<msg timestamp="20190507 02:31:53.265" level="INFO">${onlyclass} = {'name': '七年级二班', 'grade__name': '七年级', 'invitecode': '1370189366179', 'studentlimit': 20, 'studentnumber': 0, 'id': 137018, 'teacherlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:53.264" endtime="20190507 02:31:53.265"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>&amp;{class}[id]==&amp;{onlyclass}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:53.265" endtime="20190507 02:31:53.266"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$onlyclass['invitecode']==$class['invitecode']</arg>
+</arguments>
+<status status="PASS" starttime="20190507 02:31:53.266" endtime="20190507 02:31:53.268"></status>
+</kw>
+<kw name="Del All Classroom" library="py-lib.classroom.Classroom" type="teardown">
+<msg timestamp="20190507 02:31:53.609" level="INFO">{ 'gradeid': None,
+  'retcode': 0,
+  'retlist': [ { 'grade__name': '七年级',
+                 'id': 137018,
+                 'invitecode': '1370189366179',
+                 'name': '七年级二班',
+                 'studentlimit': 20,
+                 'studentnumber': 0,
+                 'teacherlist': []}]}
+{'gradeid': None, 'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:53.269" endtime="20190507 02:31:53.609"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:53.043" endtime="20190507 02:31:53.610" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190507 02:31:53.035" endtime="20190507 02:31:53.610"></status>
+</suite>
+<status status="PASS" starttime="20190507 02:31:53.030" endtime="20190507 02:31:53.613"></status>
+</suite>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>delallstudent</arg>
+<arg>AND</arg>
+<arg>delallteacher</arg>
+<arg>AND</arg>
+<arg>delAllClassroom</arg>
+</arguments>
+<kw name="Delallstudent" library="py-lib.student.Student">
+<msg timestamp="20190507 02:31:53.833" level="INFO">{'retcode': 0, 'retlist': []}
+{'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:53.625" endtime="20190507 02:31:53.833"></status>
+</kw>
+<kw name="Delallteacher" library="py-lib.teachers.Teachers">
+<msg timestamp="20190507 02:31:54.047" level="INFO">{'retcode': 0, 'retlist': []}
+{'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:53.834" endtime="20190507 02:31:54.047"></status>
+</kw>
+<kw name="Del All Classroom" library="py-lib.classroom.Classroom">
+<msg timestamp="20190507 02:31:54.252" level="INFO">{'gradeid': None, 'retcode': 0, 'retlist': []}
+已经删除完毕
+{'gradeid': None, 'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20190507 02:31:54.047" endtime="20190507 02:31:54.252"></status>
+</kw>
+<status status="PASS" starttime="20190507 02:31:53.624" endtime="20190507 02:31:54.252"></status>
+</kw>
+<status status="FAIL" starttime="20190507 02:31:38.945" endtime="20190507 02:31:54.253"></status>
+</suite>
+<status status="FAIL" starttime="20190507 02:31:38.899" endtime="20190507 02:31:54.264"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="17" fail="5">Critical Tests</stat>
+<stat pass="17" fail="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="17" fail="5" id="s1" name="Tc">Tc</stat>
+<stat pass="17" fail="5" id="s1-s1" name="D-空白数据">Tc.D-空白数据</stat>
+<stat pass="16" fail="5" id="s1-s1-s1" name="D-七年级1班">Tc.D-空白数据.D-七年级1班</stat>
+<stat pass="9" fail="1" id="s1-s1-s1-s1" name="D-黄良威老师">Tc.D-空白数据.D-七年级1班.D-黄良威老师</stat>
+<stat pass="2" fail="1" id="s1-s1-s1-s1-s1" name="D-黄雪松学生">Tc.D-空白数据.D-七年级1班.D-黄良威老师.D-黄雪松学生</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s1-s1-s1" name="Web系统操作">Tc.D-空白数据.D-七年级1班.D-黄良威老师.D-黄雪松学生.Web系统操作</stat>
+<stat pass="2" fail="0" id="s1-s1-s1-s1-s1-s2" name="学生管理2">Tc.D-空白数据.D-七年级1班.D-黄良威老师.D-黄雪松学生.学生管理2</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1-s2" name="学生管理">Tc.D-空白数据.D-七年级1班.D-黄良威老师.学生管理</stat>
+<stat pass="6" fail="0" id="s1-s1-s1-s1-s3" name="老师管理2">Tc.D-空白数据.D-七年级1班.D-黄良威老师.老师管理2</stat>
+<stat pass="0" fail="3" id="s1-s1-s1-s2" name="Web系统">Tc.D-空白数据.D-七年级1班.Web系统</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s2-s1" name="D-有一门学生">Tc.D-空白数据.D-七年级1班.Web系统.D-有一门学生</stat>
+<stat pass="0" fail="1" id="s1-s1-s1-s2-s1-s1" name="老师登录">Tc.D-空白数据.D-七年级1班.Web系统.D-有一门学生.老师登录</stat>
+<stat pass="0" fail="2" id="s1-s1-s1-s2-s2" name="Web操作">Tc.D-空白数据.D-七年级1班.Web系统.Web操作</stat>
+<stat pass="6" fail="1" id="s1-s1-s1-s3" name="班级管理2">Tc.D-空白数据.D-七年级1班.班级管理2</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s4" name="老师管理">Tc.D-空白数据.D-七年级1班.老师管理</stat>
+<stat pass="1" fail="0" id="s1-s1-s2" name="班级管理">Tc.D-空白数据.班级管理</stat>
+<stat pass="1" fail="0" id="s1-s1-s2-s1" name="班级管理">Tc.D-空白数据.班级管理.班级管理</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
